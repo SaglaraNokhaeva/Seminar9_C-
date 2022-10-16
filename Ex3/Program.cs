@@ -5,15 +5,13 @@
 
 Console.Clear();
 Console.Write("Введите число n = ");
-int num =  Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
 int result = SumOfDigit(num);
 Console.WriteLine("Сумма цифр в " + num + " равна " + result);
 
 int SumOfDigit(int n)
 {
-    if (n == 0)
-        return 0;
-
-    return (n % 10 + SumOfDigit(n / 10));
+    if (n == 0) return 0;
+    return n % 10 + SumOfDigit(n / 10);
 }
